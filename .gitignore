@@ -1,0 +1,18 @@
+# Visual Studio
+.vs/
+
+# Build folders
+**/bin/
+**/obj/
+
+# User files
+*.user
+*.suo
+*.userosscache
+
+# Rider / VS Code
+.vscode/
+.idea/
+
+# Logs
+*.log

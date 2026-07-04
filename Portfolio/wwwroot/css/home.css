@@ -1,0 +1,444 @@
+﻿/* ===========================
+   Global
+=========================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8fafc;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: 700;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+    .navbar-brand img {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .navbar-brand span {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+#hero {
+    min-height: 100vh;
+}
+
+.hero-tag {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.hero-subtitle {
+    margin-top: 15px;
+    color: #2563eb;
+}
+
+.hero-description {
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+}
+
+    .hero-buttons .btn {
+        margin-right: 15px;
+    }
+
+.profile-image {
+    width: 380px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+}
+
+/* ===========================
+   Section
+=========================== */
+
+.section-tag {
+    color: #2563eb;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+/* ===========================
+   About
+=========================== */
+
+.about-text {
+    color: #555;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.about-image {
+    width: 330px;
+    border-radius: 25px;
+    box-shadow: 0 20px 45px rgba(0,0,0,.15);
+}
+
+/* ===========================
+   Skills
+=========================== */
+
+.skill-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 35px;
+    text-align: center;
+    transition: .3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+    .skill-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .skill-card i {
+        font-size: 45px;
+        color: #2563eb;
+    }
+
+    .skill-card h5 {
+        margin-top: 20px;
+        font-weight: 600;
+    }
+
+/* ===========================
+   Timeline
+=========================== */
+
+.timeline {
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline-item {
+    border-left: 4px solid #2563eb;
+    padding-left: 30px;
+    margin-bottom: 45px;
+    position: relative;
+}
+
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background: #2563eb;
+        border-radius: 50%;
+        left: -11px;
+        top: 6px;
+    }
+
+.timeline-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.timeline-date {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.timeline-content h4 {
+    margin-top: 12px;
+    font-weight: 700;
+}
+
+.timeline-content h6 {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.project-card,
+.education-card,
+.contact-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+    .project-card:hover,
+    .education-card:hover,
+    .contact-card:hover {
+        transform: translateY(-8px);
+    }
+
+/* ===========================
+   Footer
+=========================== */
+
+.footer {
+    text-align: center;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 5px;
+}
+
+/* ===========================
+   Responsive (consolidated)
+   Rules from responsive.css were merged here to avoid duplication.
+   Keep this file as the single source for responsive overrides.
+=========================== */
+
+@media (max-width:992px) {
+
+    /* Navbar */
+    .navbar-collapse {
+        background: #fff;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,.10);
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    .navbar-brand img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar-brand span {
+        font-size: 22px;
+    }
+
+    /* Hero */
+    #hero {
+        padding-top: 90px;
+        min-height: auto;
+    }
+
+    #hero .row {
+        min-height: auto !important;
+    }
+
+    .hero-tag {
+        display: block;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.8;
+    }
+
+    .profile-image {
+        width: 220px;
+        display: block;
+        margin: 30px auto;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* Common */
+    .section-title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .section-tag {
+        display: block;
+        text-align: center;
+    }
+
+    /* About */
+    .about-image {
+        width: 220px;
+        display: block;
+        margin: auto auto 25px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    #about .col-md-6 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Skills */
+    .skill-card {
+        padding: 25px;
+    }
+
+    .skill-card i {
+        font-size: 36px;
+    }
+
+    /* Timeline */
+    .timeline-item {
+        padding-left: 20px;
+    }
+
+    .timeline-content {
+        padding: 18px;
+    }
+
+    /* Cards */
+    .project-card,
+    .education-card,
+    .contact-card {
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .social-links a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+@media (max-width:576px) {
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .navbar-brand span {
+        font-size: 18px;
+    }
+
+    .navbar-brand img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .profile-image {
+        width: 180px;
+    }
+
+    .about-image {
+        width: 180px;
+    }
+
+    .skill-card {
+        padding: 18px;
+    }
+
+    .skill-card h5 {
+        font-size: 15px;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+}
+
+/* Minor global tweaks kept from original file */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
