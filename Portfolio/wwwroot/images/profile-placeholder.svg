@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="200" fill="#e6eef8"/>
+
+  <!-- Outer ring -->
+  <circle cx="200" cy="200" r="200" fill="none" stroke="#2563eb" stroke-width="3"/>
+
+  <!-- Head -->
+  <circle cx="200" cy="130" r="60" fill="#2563eb"/>
+
+  <!-- Body -->
+  <rect x="140" y="200" width="120" height="100" rx="20" fill="#2563eb"/>
+
+  <!-- Decorative elements -->
+  <circle cx="170" cy="110" r="8" fill="#3aa0ff" opacity="0.6"/>
+  <circle cx="230" cy="115" r="6" fill="#3aa0ff" opacity="0.6"/>
+</svg>

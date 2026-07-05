@@ -1,9 +1,9 @@
-﻿<nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+﻿<nav class="navbar navbar-expand-lg fixed-top custom-navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
 
-        <a class="navbar-brand d-flex align-items-center" href="#hero">
+        <a class="navbar-brand d-flex align-items-center" href="#hero" aria-label="Vikash Kumar - Home">
             <img src="~/images/logo.png"
-                 alt="Logo"
+                 alt="Vikash Kumar Logo"
                  width="55"
                  class="me-1" />
 
@@ -19,7 +19,7 @@
                 data-bs-target="#navbar"
                 aria-controls="navbar"
                 aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Toggle navigation menu">
 
             <span class="navbar-toggler-icon"></span>
 
@@ -30,45 +30,56 @@
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">
+                    <a class="nav-link" href="#about" aria-label="Go to About section">
                         About
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#skills">
+                    <a class="nav-link" href="#skills" aria-label="Go to Skills section">
                         Skills
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#experience">
+                    <a class="nav-link" href="#experience" aria-label="Go to Experience section">
                         Experience
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">
+                    <a class="nav-link" href="#projects" aria-label="Go to Projects section">
                         Projects
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#education">
+                    <a class="nav-link" href="#education" aria-label="Go to Education section">
                         Education
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#certifications">
+                    <a class="nav-link" href="#certifications" aria-label="Go to Certifications section">
                         Certifications
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">
+                    <a class="nav-link" href="#contact" aria-label="Go to Contact section">
                         Contact
                     </a>
+                </li>
+
+                <!-- Dark Mode Toggle in Navbar -->
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                    <button id="dark-mode-toggle"
+                            class="btn btn-link nav-link p-0 d-flex align-items-center" 
+                            aria-label="Toggle dark mode" 
+                            title="Toggle dark mode"
+                            style="border: none; background: none;">
+                        <i id="dark-mode-icon" class="bi bi-moon-fill fs-5"></i>
+                    </button>
                 </li>
 
             </ul>
@@ -78,7 +89,7 @@
     </div>
 </nav>
 
-<section id="hero" class="min-vh-100 d-flex align-items-center">
+<section id="hero" class="min-vh-100 d-flex align-items-center" data-aos="fade-up">
     <div class="container">
 
         <div class="row align-items-center min-vh-100 flex-column-reverse flex-lg-row">
@@ -94,7 +105,7 @@
 
                 </h1>
 
-                <h3 class="hero-subtitle">
+                <h3 class="hero-subtitle" aria-live="polite" aria-label="Dynamic job titles: Full Stack .NET Developer, ASP.NET Core Developer, Backend Engineer, Cloud Enthusiast, Problem Solver">
 
                     Full Stack .NET Developer | ASP.NET Core | ASP.NET MVC | Web API | Microservices
                 </h3>
@@ -105,31 +116,32 @@
                 </p>
 
                 <div class="hero-buttons d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                    <a href="~/resume/Vikash_Kumar_Resume_2026.pdf"
+                    <a href="~/resume/Vikash_Resume.pdf"
                        class="btn btn-primary btn-lg"
-                       target="_blank">
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Download Vikash Kumar resume PDF">
 
                         Download Resume
 
                     </a>
 
                     <a href="#contact"
-                       class="btn btn-outline-primary btn-lg">
-
+                       class="btn btn-outline-primary btn-lg"
+                       aria-label="Go to contact form">
                         Contact Me
-
                     </a>
-
                 </div>
 
             </div>
 
             <div class="col-lg-5 text-center">
 
-                <img src="~/images/profile.png"
+                <img src="~/images/portfolio.png"
                      class="profile-image img-fluid"
-                     alt="Profile" />
-
+                     alt="Vikash Kumar - Profile Picture" 
+                     fetchpriority="high"
+                     onerror="this.src='@Url.Content("~/images/profile-placeholder.svg")'" />
             </div>
 
         </div>
@@ -138,32 +150,33 @@
 
 </section>
 
-<section id="about" class="py-5">
+<section id="about" class="py-5" data-aos="fade-right">
 
     <div class="container">
 
-        <div class="row align-items-center flex-column flex-lg-row">
-            <div class="col-lg-5 text-center">
-
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-center">
                 <img src="~/images/portfolio.png"
                      class="about-image img-fluid"
-                     alt="Vikash Kumar">
+                     alt="Vikash Kumar"
+                     fetchpriority="high"
+                     data-aos="fade-left">
 
             </div>
 
-            <div class="col-lg-7">
+            <div class="col-lg-8">
 
                 <span class="section-tag">
                     ABOUT ME
                 </span>
 
                 <h2 class="section-title">
-                    Passionate Full Stack .NET Developer
+                    Full Stack .NET Developer
                 </h2>
 
                 <p class="about-text">
 
-                    I am a Full Stack .NET Developer with almost 2 years of experience in developing enterprise web applications using ASP.NET MVC, ASP.NET Core, Web API, SQL Server, JavaScript, and cloud technologies.
+                    I am a Full Stack .NET Developer with 2+ years of experience in developing enterprise web applications using ASP.NET MVC, ASP.NET Core, Web API, SQL Server, JavaScript, and cloud technologies.
 
                 </p>
 
@@ -172,6 +185,34 @@
                     I enjoy building scalable backend systems, RESTful APIs, and modern web applications while continuously learning new technologies like Microservices, Cloud, and DevOps.
 
                 </p>
+
+                <!-- Counters: Animated using IntersectionObserver (requestAnimationFrame) -->
+                <div class="row mt-4 gy-3 counters text-center" aria-hidden="false">
+                    <div class="col-6 col-md-3">
+                        <div class="counter-item">
+                            <div class="counter" data-counter="2" data-suffix="+" aria-label="Years of experience">0</div>
+                            <div class="counter-label">Years Experience</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="counter-item">
+                            <div class="counter" data-counter="10" data-suffix="+" aria-label="Projects">0</div>
+                            <div class="counter-label">Projects</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="counter-item">
+                            <div class="counter" data-counter="15" data-suffix="+" aria-label="Technologies">0</div>
+                            <div class="counter-label">Technologies</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="counter-item">
+                            <div class="counter" data-counter="100" data-suffix="%" aria-label="Passion">0</div>
+                            <div class="counter-label">Passion</div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row mt-4 gy-3">
                     <div class="col-md-6">
@@ -186,7 +227,7 @@
 
                     <div class="col-md-6">
 
-                        <p><strong>Experience :</strong> Almost 2 Years</p>
+                        <p><strong>Experience :</strong>2+ Years</p>
 
                         <p><strong>Specialization :</strong> Full Stack .NET</p>
 
@@ -218,54 +259,54 @@
         <div class="row g-4">
 
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi bi-microsoft"></i>
                     <h5>C# / .NET</h5>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi bi-window"></i>
                     <h5>ASP.NET Core</h5>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi bi-window"></i>
                     <h5>ASP.NET MVC</h5>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi bi-window"></i>
                     <h5>Web API</h5>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi bi-database-fill"></i>
                     <h5>SQL Server</h5>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi bi-database"></i>
                     <h5>PostgreSQL</h5>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi bi-filetype-js"></i>
                     <h5>JavaScript</h5>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi bi-bootstrap-fill"></i>
                     <h5>Bootstrap</h5>
                 </div>
@@ -279,20 +320,20 @@
             </div>
 
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi-github"></i>
                     <h5>Git & GitHub</h5>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi-git"></i>
                     <h5>GitLab & CI/CD</h5>
                 </div>
             </div>
             
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in">
                     <i class="bi-cloud-check"></i>
                     <h5>Azure DevOps</h5>
                 </div>
@@ -302,7 +343,7 @@
     </div>
 
 </section>
-<section id="experience" class="py-5">
+<section id="experience" class="py-5" data-aos="fade-left">
 
     <div class="container">
 
@@ -316,7 +357,7 @@
 
         <div class="timeline">
 
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-right">
 
                 <div class="timeline-content">
 
@@ -346,7 +387,7 @@
 
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-right">
 
                 <div class="timeline-content">
 
@@ -382,7 +423,7 @@
 
 </section>
 
-<section id="projects" class="py-5 bg-light">
+<section id="projects" class="py-5 bg-light" data-aos="fade-up">
 
     <div class="container">
 
@@ -398,7 +439,7 @@
 
             <div class="col-lg-6">
 
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-up">
 
                     <h4>Employee Management System</h4>
 
@@ -417,7 +458,8 @@
 
                     <a href="https://github.com/byvikashk"
                        target="_blank"
-                       class="btn btn-outline-primary btn-sm">
+                       class="btn btn-outline-primary btn-sm"
+                       rel="noopener noreferrer">
 
                         GitHub
 
@@ -429,7 +471,7 @@
 
             <div class="col-lg-6">
 
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-up">
 
                     <h4>Smart File Organizer</h4>
 
@@ -462,7 +504,7 @@
     </div>
 
 </section>
-<section id="education" class="py-5">
+<section id="education" class="py-5" data-aos="fade-right">
 
     <div class="container">
 
@@ -474,7 +516,7 @@
 
         </div>
 
-        <div class="education-card">
+        <div class="education-card" data-aos="fade-up">
 
             <h4>Master of Technology (M.Tech)</h4>
 
@@ -488,7 +530,7 @@
 
         </div>
 
-        <div class="education-card mt-4">
+        <div class="education-card mt-4" data-aos="fade-up">
 
             <h4>Bachelor of Technology (B.Tech)</h4>
 
@@ -505,7 +547,7 @@
     </div>
 
 </section>
-<section id="certifications" class="py-5 bg-light">
+<section id="certifications" class="py-5 bg-light" data-aos="zoom-in">
 
     <div class="container">
 
@@ -521,7 +563,7 @@
 
             <div class="col-md-6">
 
-                <div class="education-card">
+                <div class="education-card" data-aos="fade-up">
 
                     <h5>Full-Stack .NET Development</h5>
 
@@ -535,7 +577,7 @@
 
             <div class="col-md-6">
 
-                <div class="education-card">
+                <div class="education-card" data-aos="fade-up">
 
                     <h5>ADCA (Advanced Diploma in Computer Applications)</h5>
 
@@ -608,7 +650,7 @@
     </div>
 
 </section>
-<section id="contact" class="py-5">
+<section id="contact" class="py-5" data-aos="fade-up">
 
     <div class="container">
 
@@ -616,11 +658,68 @@
 
             <span class="section-tag">CONTACT</span>
 
-            <h2 class="section-title">Let's Connect</h2>
+            <h2 class="section-title">Get In Touch</h2>
 
         </div>
 
         <div class="row g-4">
+
+            <!-- Contact Form (Step 11) -->
+            <div class="col-lg-6">
+
+                <form id="contact-form" class="contact-form" novalidate>
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name..." required aria-label="Your name" maxlength="50">
+                        <div class="invalid-feedback">Please provide your name.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address..." required aria-label="Your email" maxlength="50">
+                        <div class="invalid-feedback">Please provide a valid email.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">
+                            Phone <span class="text-danger">*</span>
+                        </label>
+
+                        <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9]{10}" maxlength="10" inputmode="numeric" placeholder="Enter your 10-digit mobile number..." aria-label="Your phone number">
+
+                        <div class="invalid-feedback">
+                            Please enter a valid 10-digit mobile number.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject..." required aria-label="Message subject" maxlength="100">
+                        <div class="invalid-feedback">Please provide a subject.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here..." required aria-label="Your message"></textarea>
+                        <div class="invalid-feedback">Please provide a message.</div>
+                    </div>
+
+                    <div id="contact-form-message" style="display:none; margin-bottom:1rem; padding:0.75rem; border-radius:0.375rem; font-weight:500;"></div>
+
+                    <button type="submit" class="btn btn-primary w-100" id="contact-submit-btn">
+                        <span id="submit-text">Send Message</span>
+                        <span id="submit-spinner" style="display:none;">
+                            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                            Sending...
+                        </span>
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Contact Info & Links -->
             <div class="col-lg-6">
 
                 <div class="contact-card">
@@ -630,7 +729,7 @@
                         Email
                     </h5>
 
-                    <a href="mailto:byvikashk@gmail.com">
+                    <a href="mailto:byvikashk@gmail.com" aria-label="Email Vikash Kumar">
                         byvikashk@gmail.com
                     </a>
 
@@ -639,7 +738,7 @@
                         Phone
                     </h5>
 
-                    <a href="tel:+917766040877">
+                    <a href="tel:+917766040877" aria-label="Call Vikash Kumar at +91 7766040877">
                         +91 7766040877
                     </a>
 
@@ -650,42 +749,52 @@
 
                     <p>Pune, Maharashtra, India</p>
 
-                </div>
+                    <hr class="my-4">
 
-            </div>
+                    <h5 class="mb-3">Follow & Connect</h5>
 
-            <div class="col-lg-6">
+                    <div class="social-links d-flex flex-wrap gap-2">
+                        <a href="https://www.linkedin.com/in/byvikashk"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-sm btn-primary"
+                           aria-label="Visit LinkedIn profile">
+                            <i class="bi bi-linkedin"></i> LinkedIn
+                        </a>
 
-                <div class="contact-card">
+                        <a href="https://github.com/byvikashk"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-sm btn-dark"
+                           aria-label="Visit GitHub profile">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
 
-                    <a href="https://www.linkedin.com/in/byvikashk"
+                        <a href="https://leetcode.com/u/byvikashk"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-sm btn-warning text-dark"
+                           aria-label="Visit LeetCode profile">
+                            <i class="bi bi-code-square"></i> LeetCode
+                        </a>
+
+                        <a href="https://namastedev.com/byvikashk"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-sm btn-info"
+                           aria-label="Visit Namaste Dev profile">
+                            <i class="bi bi-person-check"></i> Namaste Dev
+                        </a>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <a href="~/resume/Vikash_Resume.pdf"
                        target="_blank"
-                       class="btn btn-primary w-100 mb-3">
-                        LinkedIn
-                    </a>
-
-                    <a href="https://github.com/byvikashk"
-                       target="_blank"
-                       class="btn btn-dark w-100 mb-3">
-                        GitHub
-                    </a>
-
-                    <a href="https://leetcode.com/u/byvikashk"
-                       target="_blank"
-                       class="btn btn-warning w-100 mb-3">
-                        LeetCode
-                    </a>
-
-                    <a href="https://namastedev.com/byvikashk"
-                       target="_blank"
-                       class="btn btn-info w-100 mb-3">
-                        Namaste Dev
-                    </a>
-
-                    <a href="~/resume/Vikash_Kumar_Resume_2026.pdf"
-                       target="_blank"
-                       class="btn btn-success w-100">
-                        Download Resume
+                       rel="noopener noreferrer"
+                       class="btn btn-success w-100"
+                       aria-label="Download resume PDF">
+                        <i class="bi bi-download me-2"></i>Download Resume
                     </a>
 
                 </div>
@@ -700,7 +809,7 @@
 
 <footer class="footer py-4">
 
-    <div class="container text-center">
+    <div class="container text-center" data-aos="fade-up">
 
         <h5>VIKASH KUMAR</h5>
 
@@ -708,19 +817,19 @@
 
         <div class="social-links d-flex flex-wrap justify-content-center gap-3">
 
-                <a href="https://www.linkedin.com/in/byvikashk" target="_blank">
+            <a href="https://www.linkedin.com/in/byvikashk" target="_blank" rel="noopener noreferrer">
                     LinkedIn
                 </a>
 
-                <a href="https://github.com/byvikashk" target="_blank">
+            <a href="https://github.com/byvikashk" target="_blank" rel="noopener noreferrer">
                     GitHub
                 </a>
 
-                <a href="https://leetcode.com/u/byvikashk" target="_blank">
+            <a href="https://leetcode.com/u/byvikashk" target="_blank" rel="noopener noreferrer">
                     LeetCode
                 </a>
 
-                <a href="https://namastedev.com/byvikashk" target="_blank">
+            <a href="https://namastedev.com/byvikashk" target="_blank" rel="noopener noreferrer">
                     Namaste Dev
                 </a>
 
