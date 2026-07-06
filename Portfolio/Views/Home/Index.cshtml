@@ -12,18 +12,31 @@
             </span>
 
         </a>
+    <div class="d-flex align-items-center ms-auto d-lg-none">
+    <button id="dark-mode-toggle"
+            class="btn btn-link p-0 me-2"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+            style="border:none;background:none;">
 
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbar"
-                aria-controls="navbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation menu">
+        <i id="dark-mode-icon" class="bi bi-moon-fill fs-5"></i>
 
-            <span class="navbar-toggler-icon"></span>
+    </button>
 
-        </button>
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu">
+
+        <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+        
 
         <div class="collapse navbar-collapse" id="navbar">
 
@@ -71,16 +84,19 @@
                     </a>
                 </li>
 
-                <!-- Dark Mode Toggle in Navbar -->
-                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                    <button id="dark-mode-toggle"
-                            class="btn btn-link nav-link p-0 d-flex align-items-center" 
-                            aria-label="Toggle dark mode" 
-                            title="Toggle dark mode"
-                            style="border: none; background: none;">
-                        <i id="dark-mode-icon" class="bi bi-moon-fill fs-5"></i>
-                    </button>
-                </li>
+                <li class="nav-item ms-lg-3 d-none d-lg-flex align-items-center">
+
+                <button id="dark-mode-toggle-desktop"
+                        class="btn btn-link nav-link p-0"
+                        aria-label="Toggle dark mode"
+                        title="Toggle dark mode"
+                        style="border:none;background:none;">
+
+                    <i id="dark-mode-icon-desktop" class="bi bi-moon-fill fs-5"></i>
+
+                </button>
+
+            </li>
 
             </ul>
 

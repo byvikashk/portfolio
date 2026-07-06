@@ -25,9 +25,11 @@
     const collapse = document.getElementById('navbar');
     const scrollTopBtn = document.getElementById('scroll-top');
     const pageLoader = document.getElementById('page-loader');
-    const darkToggle = document.getElementById('dark-mode-toggle');
-    const darkIcon = document.getElementById('dark-mode-icon');
+    const darkToggle = document.getElementById("dark-mode-toggle");
+    const darkToggleDesktop = document.getElementById("dark-mode-toggle-desktop");
 
+    const darkIcon = document.getElementById("dark-mode-icon");
+    const darkIconDesktop = document.getElementById("dark-mode-icon-desktop");
     // Smooth in-page navigation (preserve existing behavior)
     function initSmoothScroll() {
 
@@ -346,31 +348,28 @@
 
     // Dark mode
     function initDarkMode() {
-        if (!darkToggle) return;
 
-        // Get stored preference or detect system preference
-        let pref = localStorage.getItem('theme');
+        let pref = localStorage.getItem("theme");
+
         if (!pref) {
-            // Auto-detect system preference on first visit
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            pref = prefersDark ? 'dark' : 'light';
+            pref = window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
         }
 
         setTheme(pref);
 
-        darkToggle.addEventListener('click', (e) => {
+        function toggleTheme(e) {
+
             e.preventDefault();
 
             const current =
-                document.documentElement.getAttribute('data-theme') === 'dark'
-                    ? 'dark'
-                    : 'light';
+                document.documentElement.getAttribute("data-theme") === "dark"
+                    ? "dark"
+                    : "light";
 
-            const next = current === 'dark' ? 'light' : 'dark';
+            setTheme(current === "dark" ? "light" : "dark");
 
-            setTheme(next);
-
-            // Close mobile menu after changing theme
             if (
                 window.innerWidth < 992 &&
                 collapse &&
@@ -378,22 +377,28 @@
             ) {
                 bootstrap.Collapse.getOrCreateInstance(collapse).hide();
             }
-        });
+        }
+
+        darkToggle?.addEventListener("click", toggleTheme);
+        darkToggleDesktop?.addEventListener("click", toggleTheme);
     }
 
     function setTheme(theme) {
-        if (theme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            if (darkIcon) {
-                darkIcon.className =
-                    theme === "dark"
-                        ? "bi bi-sun-fill"
-                        : "bi bi-moon-fill";
-            }        } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            darkIcon.className = 'bi bi-moon-fill';
-        }
-        localStorage.setItem('theme', theme);
+
+        document.documentElement.setAttribute("data-theme", theme);
+
+        const iconClass =
+            theme === "dark"
+                ? "bi bi-sun-fill fs-5"
+                : "bi bi-moon-fill fs-5";
+
+        if (darkIcon)
+            darkIcon.className = iconClass;
+
+        if (darkIconDesktop)
+            darkIconDesktop.className = iconClass;
+
+        localStorage.setItem("theme", theme);
     }
 
     // Utility: throttle

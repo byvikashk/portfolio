@@ -663,7 +663,14 @@ section {
         border-radius: 12px;
         box-shadow: 0 8px 20px rgba(0,0,0,.10);
     }
-
+    /* Mobile Navbar Controls */
+    #dark-mode-toggle {
+        margin-right: 12px !important;
+        margin-left: 0 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     [data-theme="dark"] .navbar-collapse {
         background: var(--navbar-bg);
     }
