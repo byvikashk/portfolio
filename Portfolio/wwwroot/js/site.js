@@ -38,6 +38,11 @@
                 e.preventDefault();
 
                 const href = this.getAttribute("href");
+                document.querySelectorAll(".nav-link").forEach(l => {
+                    l.classList.remove("active");
+                });
+
+                this.classList.add("active");
                 const target = document.querySelector(href);
 
                 if (!target) return;
@@ -126,8 +131,7 @@
             const navbarHeight = navbar ? navbar.offsetHeight : 0;
             // Use negative top margin to detect when section enters viewport (accounts for navbar)
             // Use negative bottom margin to keep section highlighted while visible
-            const rootMargin = `-${navbarHeight + 50}px 0px -60% 0px`;
-
+            const rootMargin = `-${navbarHeight}px 0px -70% 0px`;
             observer = new IntersectionObserver((entries) => {
                 // Find the most visible section
                 let mostVisible = null;
@@ -163,7 +167,7 @@
                     const activeLink = linkById.get(id);
                     if (activeLink) activeLink.classList.add('active');
                 }
-            }, { root: null, rootMargin, threshold: [0, 0.25, 0.5, 0.75, 1] });
+            }, { root: null, rootMargin, threshold: 0.3 });
 
             sections.forEach(s => observer.observe(s));
         }
