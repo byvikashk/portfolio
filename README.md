@@ -1,12 +1,18 @@
 # 🌐 Personal Portfolio Website
 
+![.NET](https://img.shields.io/badge/.NET-8-purple)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-8-blue)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple)
+![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?logo=docker&logoColor=white)
+![Render](https://img.shields.io/badge/Hosted%20on-Render-success)
+
 A modern, responsive, and production-ready **Personal Portfolio Website** built using **ASP.NET Core 8 MVC**. This project showcases my professional profile, technical skills, work experience, projects, education, certifications, and includes a fully functional contact form integrated with **Google Sheets**.
 
 ---
 
-## 🚀 Live Demo
+# 🚀 Live Demo
 
-### 🌍 Custom Domain
+### 🌍 Portfolio
 
 👉 **https://byvikashk.in**
 
@@ -28,26 +34,23 @@ A modern, responsive, and production-ready **Personal Portfolio Website** built 
 - Professional Hero Section
 - About Me
 - Technical Skills
-- Work Experience
+- Professional Experience Timeline
 - Featured Projects
-- Education
-- Certifications
-- Contact Form
-- Google Sheets Integration
+- Education & Certifications
+- Contact Form with Google Sheets Integration
 - Resume Download
 - Social Media Links
-- Dockerized Deployment
-- Render Hosting
-- Custom Domain Integration
-- HTTPS Enabled
 - SEO Friendly
+- HTTPS Enabled
 - Clean UI/UX
+- Dockerized Deployment
+- Custom Domain Integration
 
 ---
 
 # 🛠 Tech Stack
 
-## Frontend
+## 🎨 Frontend
 
 - HTML5
 - CSS3
@@ -55,23 +58,23 @@ A modern, responsive, and production-ready **Personal Portfolio Website** built 
 - JavaScript
 - jQuery
 
-## Backend
+## ⚙️ Backend
 
 - ASP.NET Core 8 MVC
 - C#
 
-## Deployment
+## 🚀 Deployment
 
 - Docker
 - Render
 
-## Domain
+## 🌐 Domain
 
 - GoDaddy
 - Custom Domain Mapping
 - SSL Certificate
 
-## Other Integrations
+## 🔗 Integrations
 
 - Google Apps Script
 - Google Sheets
@@ -90,7 +93,7 @@ Portfolio
 │   ├── css
 │   ├── js
 │   ├── images
-│   └── files
+│   └── resume
 ├── Properties
 ├── Program.cs
 ├── appsettings.json
@@ -102,29 +105,31 @@ Portfolio
 
 # 💻 Local Setup
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/byvikashk/portfolio.git
 ```
 
-### Navigate to Project
+## Navigate to Project
 
 ```bash
 cd portfolio/Portfolio
 ```
 
-### Restore Packages
+## Restore Packages
 
 ```bash
 dotnet restore
 ```
 
-### Run Project
+## Run Application
 
 ```bash
 dotnet run
 ```
+
+The application will start locally and can be accessed in your browser.
 
 ---
 
@@ -167,25 +172,27 @@ This application is deployed using:
 
 # 📬 Contact
 
-**Vikash Kumar**
+## Vikash Kumar
 
-📧 Email  
+📧 **Email**  
 [byvikashk@gmail.com](mailto:byvikashk@gmail.com)
 
-🌐 Portfolio  
+🌐 **Portfolio**  
 https://byvikashk.in
 
-💻 GitHub  
+💻 **GitHub**  
 https://github.com/byvikashk
 
-💼 LinkedIn  
-https://www.linkedin.com/in/vikash-kumar/
+💼 **LinkedIn**  
+https://www.linkedin.com/in/byvikashk
 
 ---
 
 # 📄 License
 
-This project is created for educational and professional portfolio purposes.
+This project is intended for **learning and portfolio demonstration purposes**.
+
+Please do **not copy or redistribute the complete project** without permission.
 
 ---
 
@@ -193,7 +200,9 @@ This project is created for educational and professional portfolio purposes.
 
 **Vikash Kumar**
 
-Full Stack .NET Developer
+**Full Stack .NET Developer**
+
+**ASP.NET Core • Web API • SQL Server • Cloud • Microservices**
 
 📍 India
 
@@ -207,7 +216,7 @@ It helps others discover the project and motivates me to build more awesome appl
 
 ---
 
-## 🙏 Thank You
+# 🙏 Thank You
 
 Thank you for visiting this repository!
 
