@@ -427,7 +427,6 @@
             if (progress < 1) requestAnimationFrame(step);
             else el.textContent = end + suffix;
         }
-
         requestAnimationFrame(step);
     }
 
